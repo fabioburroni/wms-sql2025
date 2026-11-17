@@ -1,0 +1,13 @@
+{
+  "name": "Conversione SQL Server 2025 -> 2016",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/powershell:1": {}
+  },
+  "hostRequirements": {
+    "cpus": 2,
+    "memory": "8gb"
+  },
+  "postCreateCommand": "pwsh -NoProfile -Command \"Set-PSRepository PSGallery -InstallationPolicy Trusted; Install-Module dbatools -Scope CurrentUser -Force\""
+}
